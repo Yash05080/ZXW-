@@ -20,12 +20,12 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 30,
+                height: 20,
               ),
               //appbar
               CustomAppBar(),
               SizedBox(
-                height: 15,
+                height: 5,
               ),
               //searchbar
               CustomSearchBar(),

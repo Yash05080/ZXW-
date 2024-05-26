@@ -1,4 +1,5 @@
 import 'package:e_commerce/constants.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -16,7 +17,7 @@ class CustomAppBar extends StatelessWidget {
                 backgroundColor: kcontentcolor, padding: EdgeInsets.all(20)),
             onPressed: () {},
             icon: Icon(
-              Icons.settings,
+              CupertinoIcons.line_horizontal_3_decrease_circle,
               size: 30,
             )),
         IconButton(
@@ -25,7 +26,7 @@ class CustomAppBar extends StatelessWidget {
             onPressed: () {},
             iconSize: 30,
             icon: Icon(
-              Icons.notifications,
+              Icons.notifications_outlined,
             )),
       ],
     );
