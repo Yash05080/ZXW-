@@ -1,6 +1,7 @@
 import 'package:e_commerce/constants.dart';
 import 'package:e_commerce/functions/navigator.dart';
 import 'package:e_commerce/screens/Home/functions/customAppBar.dart';
+import 'package:e_commerce/screens/Home/functions/image_slider.dart';
 import 'package:e_commerce/screens/Home/functions/searchbar.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int currentSlider = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +31,16 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               //searchbar
               CustomSearchBar(),
+              SizedBox(
+                height: 15,
+              ),
+              ImageSlider(
+                  currentSlide: currentSlider,
+                  onChange: (value) {
+                    setState(() {
+                      currentSlider = value;
+                    });
+                  })
             ],
           ),
         ),

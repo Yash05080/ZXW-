@@ -1,3 +1,4 @@
+import 'package:e_commerce/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchBar extends StatelessWidget {
@@ -9,6 +10,7 @@ class CustomSearchBar extends StatelessWidget {
       height: 50,
       width: double.infinity,
       decoration: BoxDecoration(
+        color: kcontentcolor,
         borderRadius: BorderRadius.circular(30),
       ),
       padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
