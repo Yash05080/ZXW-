@@ -1,4 +1,5 @@
 import 'package:e_commerce/screens/Home/homepage.dart';
+import 'package:e_commerce/screens/nav_bar.dart';
 
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -56,7 +57,7 @@ class OnboardingScreen extends StatelessWidget {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => MyHomePage(),
+                        builder: (context) => bottomNavigationBar(),
                       ));
                 },
                 child: Padding(
