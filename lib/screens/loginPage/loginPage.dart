@@ -16,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
       children: [
         SizedBox(
-          height: 10,
+          height: 30,
         ),
         Text(
           "ZXW",
@@ -30,9 +30,24 @@ class _LoginPageState extends State<LoginPage> {
           style: TextStyle(fontSize: 20),
         ),
         SizedBox(
-          height: 20,
+          height: 40,
         ),
-        TextField()
+        Container(width: 300, child: TextField()),
+        SizedBox(
+          height: 30,
+        ),
+        Container(width: 300, child: TextField()),
+        SizedBox(
+          height: 10,
+        ),
+        Text(
+          "forgot password?",
+          style: TextStyle(color: Colors.lightBlue),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Text("Create account", style: TextStyle(color: Colors.lightBlue)),
       ],
     ))));
   }
