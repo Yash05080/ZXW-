@@ -1,9 +1,10 @@
+import 'package:e_commerce/screens/loginPage/loginPage.dart';
 import 'package:e_commerce/screens/nav_bar.dart';
 import 'package:e_commerce/screens/splashscreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: bottomNavigationBar(),
+      home: LoginPage(),
     );
   }
 }
