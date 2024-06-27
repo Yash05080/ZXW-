@@ -1,4 +1,7 @@
-import 'package:e_commerce/screens/loginPage/loginbutton.dart';
+import 'dart:async';
+import 'dart:ui';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -10,6 +13,22 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
+  Future signin() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: _usernameController.text.trim(),
+        password: _passwordController.text.trim());
+  }
+
+  @override
+  void dispose() {
+    _usernameController.dispose();
+    _passwordController.dispose();
+
+    super.dispose();
+  }
+
   bool _obscureText = true;
 
   void _toggleVisibility() {
@@ -71,6 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15.0),
                   child: TextField(
+                    controller: _usernameController,
                     style: TextStyle(color: HexColor("FFD078")),
                     cursorColor: HexColor("FFD078"),
                     decoration: InputDecoration(
@@ -101,6 +121,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15.0),
                   child: TextField(
+                    controller: _passwordController,
                     style: TextStyle(color: HexColor("FFD078")),
                     cursorColor: HexColor("FFD078"),
                     cursorErrorColor: Colors.red,
@@ -129,7 +150,51 @@ class _LoginPageState extends State<LoginPage> {
 
           //login in button
 
-          FrostedGlassButton(),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Stack(
+              children: [
+                // Frosted glass effect
+                BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                        color: Colors.white.withOpacity(0.3),
+                        width: 1.0,
+                      ),
+                    ),
+                  ),
+                ),
+                // Elevated button on top of the frosted glass effect
+                SizedBox(
+                  width: 200,
+                  height: 50,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Colors.transparent,
+                    ),
+                    onPressed: () {
+                      signin();
+                      // Handle sign in button press
+                    },
+                    child: Text(
+                      'Sign In',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
           SizedBox(
             height: 10,
           ),
