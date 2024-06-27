@@ -64,15 +64,20 @@ class _LoginPageState extends State<LoginPage> {
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: Colors.white12,
                   border: Border.all(color: Colors.white),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15.0),
                   child: TextField(
+                    style: TextStyle(color: HexColor("FFD078")),
+                    cursorColor: HexColor("FFD078"),
                     decoration: InputDecoration(
-                        suffixIcon: Icon(Icons.person),
+                        suffixIcon: Icon(
+                          Icons.person,
+                          color: HexColor("C00000"),
+                        ),
                         hintText: "username",
                         hintStyle: TextStyle(color: Colors.grey),
                         border: InputBorder.none),
@@ -89,13 +94,16 @@ class _LoginPageState extends State<LoginPage> {
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: Colors.white12,
                   border: Border.all(color: Colors.white),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15.0),
                   child: TextField(
+                    style: TextStyle(color: HexColor("FFD078")),
+                    cursorColor: HexColor("FFD078"),
+                    cursorErrorColor: Colors.red,
                     obscureText: _obscureText,
                     decoration: InputDecoration(
                       hintText: "password",
@@ -106,6 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                           _obscureText
                               ? Icons.visibility
                               : Icons.visibility_off,
+                          color: HexColor("C00000"),
                         ),
                         onPressed: _toggleVisibility,
                       ),
