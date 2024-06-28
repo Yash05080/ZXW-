@@ -1,5 +1,6 @@
 import 'package:e_commerce/screens/Home/homepage.dart';
 import 'package:e_commerce/screens/loginPage/loginPage.dart';
+
 import 'package:e_commerce/screens/nav_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class _MainDirectorState extends State<MainDirector> {
           if (snapshot.hasData) {
             return bottomNavigationBar();
           } else {
-            return MyHomePage();
+            return LoginPage();
           }
         },
       ),
