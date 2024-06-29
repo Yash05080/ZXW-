@@ -1,4 +1,5 @@
 import 'package:e_commerce/screens/Home/homepage.dart';
+import 'package:e_commerce/screens/loginPage/auth_page.dart';
 import 'package:e_commerce/screens/loginPage/loginPage.dart';
 
 import 'package:e_commerce/screens/nav_bar.dart';
@@ -22,7 +23,7 @@ class _MainDirectorState extends State<MainDirector> {
           if (snapshot.hasData) {
             return bottomNavigationBar();
           } else {
-            return LoginPage();
+            return AuthPage();
           }
         },
       ),

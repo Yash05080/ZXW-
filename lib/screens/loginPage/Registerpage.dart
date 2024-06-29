@@ -1,26 +1,20 @@
-import 'dart:async';
 import 'dart:ui';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class LoginPage extends StatefulWidget {
-  final VoidCallback showRegisterPage;
-  const LoginPage({super.key, required this.showRegisterPage});
+class RegisterPage extends StatefulWidget {
+  final VoidCallback showLoginPage;
+  const RegisterPage({super.key, required this.showLoginPage});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
-  Future signin() async {
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: _usernameController.text.trim(),
-        password: _passwordController.text.trim());
-  }
+  Future signup() async {}
 
   @override
   void dispose() {
@@ -28,14 +22,6 @@ class _LoginPageState extends State<LoginPage> {
     _passwordController.dispose();
 
     super.dispose();
-  }
-
-  bool _obscureText = true;
-
-  void _toggleVisibility() {
-    setState(() {
-      _obscureText = !_obscureText;
-    });
   }
 
   @override
@@ -71,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
 
           //welcome text
           Text(
-            "Welcome again",
+            "Bonjour Patron",
             style: TextStyle(fontSize: 20, color: Colors.white70),
           ),
           SizedBox(
@@ -126,19 +112,13 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(color: HexColor("FFD078")),
                     cursorColor: HexColor("FFD078"),
                     cursorErrorColor: Colors.red,
-                    obscureText: _obscureText,
                     decoration: InputDecoration(
                       hintText: "password",
                       hintStyle: TextStyle(color: Colors.grey),
                       border: InputBorder.none,
-                      suffixIcon: IconButton(
-                        icon: Icon(
-                          _obscureText
-                              ? Icons.visibility
-                              : Icons.visibility_off,
-                          color: HexColor("C00000"),
-                        ),
-                        onPressed: _toggleVisibility,
+                      suffixIcon: Icon(
+                        Icons.lock,
+                        color: HexColor("C00000"),
                       ),
                     ),
                   ),
@@ -181,11 +161,11 @@ class _LoginPageState extends State<LoginPage> {
                       shadowColor: Colors.transparent,
                     ),
                     onPressed: () {
-                      signin();
+                      signup();
                       // Handle sign in button press
                     },
                     child: Text(
-                      'Sign In',
+                      'create account',
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.white,
@@ -213,7 +193,7 @@ class _LoginPageState extends State<LoginPage> {
           //create account
 
           InkWell(
-              onTap: widget.showRegisterPage,
+              onTap: widget.showLoginPage,
               child: Text("Create account",
                   style: TextStyle(color: Colors.lightBlue))),
         ],
