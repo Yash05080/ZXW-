@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -14,7 +15,16 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
-  Future signup() async {}
+  final _confirmpasswordController = TextEditingController();
+
+  Future signup() async {
+    if (_passwordController.text.trim() ==
+        _confirmpasswordController.text.trim()) {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: _usernameController.text.trim(),
+          password: _passwordController.text.trim());
+    }
+  }
 
   @override
   void dispose() {
@@ -129,6 +139,38 @@ class _RegisterPageState extends State<RegisterPage> {
             height: 20,
           ),
 
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white12,
+                  border: Border.all(color: Colors.white),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 15.0),
+                  child: TextField(
+                    controller: _confirmpasswordController,
+                    style: TextStyle(color: HexColor("FFD078")),
+                    cursorColor: HexColor("FFD078"),
+                    cursorErrorColor: Colors.red,
+                    decoration: InputDecoration(
+                      hintText: "confirm password",
+                      hintStyle: TextStyle(color: Colors.grey),
+                      border: InputBorder.none,
+                      suffixIcon: Icon(
+                        Icons.lock_reset,
+                        color: HexColor("C00000"),
+                      ),
+                    ),
+                  ),
+                )),
+          ),
+
+          SizedBox(
+            height: 20,
+          ),
+
           //login in button
 
           ClipRRect(
@@ -177,25 +219,24 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
 
           //forgot password
 
-          Text(
-            "forgot password?",
-            style: TextStyle(color: Colors.lightBlue),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-
           //create account
 
           InkWell(
-              onTap: widget.showLoginPage,
-              child: Text("Create account",
-                  style: TextStyle(color: Colors.lightBlue))),
+            onTap: widget.showLoginPage,
+            child: RichText(
+              text: TextSpan(children: <TextSpan>[
+                TextSpan(text: "Already have an account? "),
+                TextSpan(
+                    text: "Login Now",
+                    style: TextStyle(color: Colors.lightBlue))
+              ]),
+            ),
+          ),
         ],
       ))),
     ]));
