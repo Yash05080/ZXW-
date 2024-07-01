@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:ui';
+import 'package:e_commerce/screens/loginPage/forgotPass.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -202,9 +203,16 @@ class _LoginPageState extends State<LoginPage> {
 
           //forgot password
 
-          Text(
-            "forgot password?",
-            style: TextStyle(color: Colors.lightBlue),
+          InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return ForgetPass();
+              }));
+            },
+            child: Text(
+              "forgot password?",
+              style: TextStyle(color: Colors.lightBlue),
+            ),
           ),
           SizedBox(
             height: 10,
