@@ -18,6 +18,7 @@ class ImageViaLink extends StatelessWidget {
           } else {
             return Center(
               child: CircularProgressIndicator(
+                color: Colors.red,
                 value: loadingProgress.expectedTotalBytes != null
                     ? loadingProgress.cumulativeBytesLoaded /
                         (loadingProgress.expectedTotalBytes ?? 1)

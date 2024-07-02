@@ -5,6 +5,7 @@ import 'package:e_commerce/screens/profile/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:e_commerce/constants.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class bottomNavigationBar extends StatefulWidget {
   @override
@@ -43,7 +44,7 @@ class _NavigationBarState extends State<bottomNavigationBar> {
       bottomNavigationBar: BottomAppBar(
         elevation: 4,
         height: 60,
-        color: const Color.fromARGB(255, 255, 255, 255),
+        color: HexColor("F8f8ff"),
         shape: CircularNotchedRectangle(),
         notchMargin: 10,
         clipBehavior: Clip.antiAliasWithSaveLayer,
