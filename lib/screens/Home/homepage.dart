@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       childAspectRatio: 0.75,
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20),
-                  itemCount: 1,
+                  itemCount: all.length,
                   itemBuilder: (context, index) {
                     return Productcard(
                       product: all[index],

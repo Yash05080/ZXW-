@@ -31,7 +31,7 @@ final List<Product> all = [
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
     image:
-        "https://5.imimg.com/data5/SELLER/Default/2022/3/AN/NS/HN/12731052/p47-headphones-wireless-bluetooth-portable-sports-headphones-with-mic-1000x1000.png",
+        "https://www.ooberpad.com/cdn/shop/products/B_WPx8-tan.jpg?v=1670560666&width=1100",
     price: 120,
     seller: "Tariqul isalm",
     colors: [
@@ -48,7 +48,8 @@ final List<Product> all = [
     title: "Woman Sweater",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/all/sweet.png",
+    image:
+        "https://images-cdn.ubuy.co.in/65607cd210825906de74540f-cardigan-women-chunky-autumn-winter.jpg",
     price: 120,
     seller: "Joy Store",
     colors: [
@@ -65,7 +66,8 @@ final List<Product> all = [
     title: "Smart Watch",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/all/miband.jpg",
+    image:
+        "https://www.yankodesign.com/images/design_news/2022/01/auto-draft/louis_vuitton_tambour_horizon_1.jpg",
     price: 55,
     seller: "Ram Das",
     colors: [
@@ -82,7 +84,8 @@ final List<Product> all = [
     title: "Mens Jacket",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/all/jacket.png",
+    image:
+        "https://images-cdn.ubuy.co.in/6537d66ff37a020b552e9322-tacvasen-men-39-s-cotton-jackets-winter.jpg",
     price: 155,
     seller: "Jacket Store",
     colors: [
@@ -99,7 +102,8 @@ final List<Product> all = [
     title: "Watch",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/men fashion/watch.png",
+    image:
+        "https://5.imimg.com/data5/AK/BS/MI/ANDROID-64079611/product-jpeg-1000x1000.jpg",
     price: 1000,
     seller: "Jacket Store",
     colors: [
@@ -116,7 +120,8 @@ final List<Product> all = [
     title: "Air Jordan",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/shoes/Air Jordan.png",
+    image:
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/bb5e235a-9096-44cd-af79-f8f09da6683c/air-jordan-1-retro-high-og-latte-shoes-fTHb42.png",
     price: 255,
     seller: "The Seller",
     colors: [
@@ -133,7 +138,8 @@ final List<Product> all = [
     title: "Super Perfume",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/beauty/perfume.png",
+    image:
+        "https://www.parcos.com/_next/image?url=https%3A%2F%2Fprod.parcoscom.hyperx.cloud%2Fmedia%2Fcatalog%2Fproduct%2F8%2F0%2F8011003846627_1_1.webp&w=1080&q=75",
     price: 155,
     seller: "Love Seller",
     colors: [
@@ -150,7 +156,8 @@ final List<Product> all = [
     title: "Wedding Ring",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/jewelry/wedding ring.png",
+    image:
+        "https://cdn.augrav.com/online/jewels/2021/11/12142638/AdobeStock_260713953.jpg",
     price: 155,
     seller: "I Am Seller",
     colors: [
@@ -167,7 +174,8 @@ final List<Product> all = [
     title: "  Pants",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/women fashion/pants.png",
+    image:
+        "https://i.etsystatic.com/23998705/r/il/98026f/4112948623/il_1588xN.4112948623_p0xv.jpg",
     price: 155,
     seller: "PK Store",
     colors: [
@@ -187,7 +195,8 @@ final List<Product> shoes = [
     title: "Air Jordan",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/shoes/Air Jordan.png",
+    image:
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/bb5e235a-9096-44cd-af79-f8f09da6683c/air-jordan-1-retro-high-og-latte-shoes-fTHb42.png",
     price: 255,
     seller: "The Seller",
     colors: [
@@ -204,7 +213,8 @@ final List<Product> shoes = [
     title: "Vans Old Skool",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/shoes/vans old skool.png",
+    image:
+        "https://5.imimg.com/data5/ANDROID/Default/2023/1/OW/CO/WQ/154736600/product-jpeg-1000x1000.jpg",
     price: 300,
     seller: "Mrs Store",
     colors: [
@@ -221,7 +231,8 @@ final List<Product> shoes = [
     title: "Women-Shoes",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/shoes/women-shoes.png",
+    image:
+        "https://5.imimg.com/data5/SELLER/Default/2023/12/365430631/LB/YJ/FA/6215968/casual-women-shoes-1000x1000.jpg",
     price: 500,
     seller: "Shoes Store",
     colors: [
@@ -238,7 +249,8 @@ final List<Product> shoes = [
     title: "Sports Shoes",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/shoes/sports shoes.png",
+    image:
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: 155,
     seller: "Hari Store",
     colors: [
@@ -255,7 +267,8 @@ final List<Product> shoes = [
     title: "White Sneaker",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/shoes/white sneaker.png",
+    image:
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: 1000,
     seller: "Jacket Store",
     colors: [
@@ -275,7 +288,8 @@ final List<Product> beauty = [
     title: "Face Care Product",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/beauty/face care.png",
+    image:
+        "https://www.babyforest.in/cdn/shop/products/Untitled-1_24ba076b-e68e-46fc-8e3c-366c70b9ec38_1376x1376.jpg?v=1670997576",
     price: 1500,
     seller: "Yojana Seller",
     colors: [
@@ -292,7 +306,8 @@ final List<Product> beauty = [
     title: "Super Perfume",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/beauty/perfume.png",
+    image:
+        "https://www.babyforest.in/cdn/shop/products/Untitled-1_24ba076b-e68e-46fc-8e3c-366c70b9ec38_1376x1376.jpg?v=1670997576",
     price: 155,
     seller: "Love Seller",
     colors: [
@@ -309,7 +324,8 @@ final List<Product> beauty = [
     title: "Skin-Care Product",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/beauty/skin-care.png",
+    image:
+        "https://www.babyforest.in/cdn/shop/products/Untitled-1_24ba076b-e68e-46fc-8e3c-366c70b9ec38_1376x1376.jpg?v=1670997576",
     price: 999,
     seller: "Mr Beast",
     colors: [
@@ -329,7 +345,8 @@ final List<Product> womenFashion = [
     title: " Women Kurta",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/women fashion/kurta.png",
+    image:
+        "https://rangdeep.in/cdn/shop/products/women-pure-cotton-kurta-with-pajama-kurti-dupatta-set-pant-rangdeep-fashions-818790_1080x1440.jpg?v=1691219384",
     price: 299,
     seller: "Sila Store",
     colors: [
@@ -346,7 +363,8 @@ final List<Product> womenFashion = [
     title: "Mens Jacket",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/women fashion/lehenga.png",
+    image:
+        "https://rangdeep.in/cdn/shop/products/women-pure-cotton-kurta-with-pajama-kurti-dupatta-set-pant-rangdeep-fashions-818790_1080x1440.jpg?v=1691219384",
     price: 666,
     seller: "My Store",
     colors: [
@@ -363,7 +381,8 @@ final List<Product> womenFashion = [
     title: "T-Shert",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/women fashion/t-shert.png",
+    image:
+        "https://rangdeep.in/cdn/shop/products/women-pure-cotton-kurta-with-pajama-kurti-dupatta-set-pant-rangdeep-fashions-818790_1080x1440.jpg?v=1691219384",
     price: 155,
     seller: "Love Store",
     colors: [
@@ -380,7 +399,8 @@ final List<Product> womenFashion = [
     title: "  Pants",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/women fashion/pants.png",
+    image:
+        "https://rangdeep.in/cdn/shop/products/women-pure-cotton-kurta-with-pajama-kurti-dupatta-set-pant-rangdeep-fashions-818790_1080x1440.jpg?v=1691219384",
     price: 155,
     seller: "PK Store",
     colors: [
@@ -399,7 +419,8 @@ final List<Product> jewelry = [
     title: "Earrings",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/jewelry/earrings.png",
+    image:
+        "https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: 3000,
     seller: "Gold Store",
     colors: [
@@ -416,7 +437,8 @@ final List<Product> jewelry = [
     title: "Jewelry-Box",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/jewelry/jewelry-box.png",
+    image:
+        "https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: 300,
     seller: "Love Love",
     colors: [
@@ -433,7 +455,8 @@ final List<Product> jewelry = [
     title: "Wedding Ring",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/jewelry/wedding ring.png",
+    image:
+        "https://rangdeep.in/cdn/shop/products/women-pure-cotton-kurta-with-pajama-kurti-dupatta-set-pant-rangdeep-fashions-818790_1080x1440.jpg?v=1691219384",
     price: 155,
     seller: "I Am Seller",
     colors: [
@@ -450,7 +473,8 @@ final List<Product> jewelry = [
     title: "Necklace-Jewellery",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/jewelry/necklace-jewellery.png",
+    image:
+        "https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: 5000,
     seller: "Jewellery Store",
     colors: [
@@ -469,7 +493,8 @@ final List<Product> menFashion = [
     title: "Man Jacket",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/men fashion/man jacket.png",
+    image:
+        "https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     price: 500,
     seller: "Men Store",
     colors: [
@@ -486,7 +511,8 @@ final List<Product> menFashion = [
     title: "Men Pants",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/men fashion/pants.png",
+    image:
+        "https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     price: 400,
     seller: "My Store",
     colors: [
@@ -505,7 +531,8 @@ final List<Product> menFashion = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
     image: "images/men fashion/shert.png",
     price: 300,
-    seller: "Roman Store",
+    seller:
+        "https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     colors: [
       Colors.pink,
       Colors.amber,
@@ -522,7 +549,8 @@ final List<Product> menFashion = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
     image: "images/men fashion/t-shirt.png",
     price: 200,
-    seller: "Hot Store",
+    seller:
+        "https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     colors: [
       Colors.brown,
       Colors.orange,
@@ -537,7 +565,8 @@ final List<Product> menFashion = [
     title: "Watch",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/men fashion/watch.png",
+    image:
+        "https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     price: 1000,
     seller: "Jacket Store",
     colors: [
