@@ -43,6 +43,7 @@ class Productcard extends StatelessWidget {
                       } else {
                         return Center(
                           child: CircularProgressIndicator(
+                            strokeCap: StrokeCap.butt,
                             color: Colors.red,
                             value: loadingProgress.expectedTotalBytes != null
                                 ? loadingProgress.cumulativeBytesLoaded /

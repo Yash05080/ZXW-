@@ -4,7 +4,8 @@ import 'package:e_commerce/constants.dart';
 
 class ItemsDetails extends StatelessWidget {
   final Product product;
-  const ItemsDetails({super.key, required this.product});
+
+  ItemsDetails({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
