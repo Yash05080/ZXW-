@@ -14,6 +14,30 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int currentSlider = 0;
+
+  late PageController _pageController;
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(initialPage: currentSlider);
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  void _onPageChanged(int index) {
+    if (index >= 5) {
+      _pageController.jumpToPage(0);
+      index = 0;
+    }
+    setState(() {
+      currentSlider = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,6 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               // image slider
               ImageSlider(
+                  pageController: _pageController,
                   currentSlide: currentSlider,
                   onChange: (value) {
                     setState(() {

@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class ImageSlider extends StatelessWidget {
   final Function(int) onChange;
   final int currentSlide;
-  const ImageSlider({
+  final PageController pageController;
+  ImageSlider({
     super.key,
     required this.currentSlide,
     required this.onChange,
+    required this.pageController,
   });
 
   @override
@@ -19,6 +21,7 @@ class ImageSlider extends StatelessWidget {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(15),
             child: PageView(
+              controller: pageController,
               scrollDirection: Axis.horizontal,
               allowImplicitScrolling: true,
               onPageChanged: onChange,
