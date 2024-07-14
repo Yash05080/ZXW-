@@ -31,41 +31,44 @@ class Productcard extends StatelessWidget {
                   height: 15,
                 ),
                 Center(
-                  child: Image.network(
-                    product.image,
-                    width: 130,
-                    height: 130,
-                    fit: BoxFit.cover,
-                    loadingBuilder: (BuildContext context, Widget child,
-                        ImageChunkEvent? loadingProgress) {
-                      if (loadingProgress == null) {
-                        return child;
-                      } else {
-                        return Center(
-                          child: CircularProgressIndicator(
-                            strokeCap: StrokeCap.butt,
-                            color: Colors.red,
-                            value: loadingProgress.expectedTotalBytes != null
-                                ? loadingProgress.cumulativeBytesLoaded /
-                                    (loadingProgress.expectedTotalBytes ?? 1)
-                                : null,
-                          ),
+                  child: Hero(
+                    tag: product.image,
+                    child: Image.network(
+                      product.image,
+                      width: 130,
+                      height: 130,
+                      fit: BoxFit.cover,
+                      loadingBuilder: (BuildContext context, Widget child,
+                          ImageChunkEvent? loadingProgress) {
+                        if (loadingProgress == null) {
+                          return child;
+                        } else {
+                          return Center(
+                            child: CircularProgressIndicator(
+                              strokeCap: StrokeCap.butt,
+                              color: Colors.red,
+                              value: loadingProgress.expectedTotalBytes != null
+                                  ? loadingProgress.cumulativeBytesLoaded /
+                                      (loadingProgress.expectedTotalBytes ?? 1)
+                                  : null,
+                            ),
+                          );
+                        }
+                      },
+                      errorBuilder: (BuildContext context, Object exception,
+                          StackTrace? stackTrace) {
+                        return Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.error, color: Colors.red, size: 50),
+                            SizedBox(height: 10),
+                            Text('Failed to load image'),
+                            SizedBox(height: 10),
+                            Text('$exception'),
+                          ],
                         );
-                      }
-                    },
-                    errorBuilder: (BuildContext context, Object exception,
-                        StackTrace? stackTrace) {
-                      return Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.error, color: Colors.red, size: 50),
-                          SizedBox(height: 10),
-                          Text('Failed to load image'),
-                          SizedBox(height: 10),
-                          Text('$exception'),
-                        ],
-                      );
-                    },
+                      },
+                    ),
                   ),
                 ),
                 SizedBox(
