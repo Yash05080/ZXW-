@@ -42,7 +42,7 @@ class _NavigationBarState extends State<bottomNavigationBar> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-        elevation: 10,
+        elevation: 2,
         height: 60,
         color: Colors.white,
         shape: CircularNotchedRectangle(),

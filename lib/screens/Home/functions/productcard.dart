@@ -27,16 +27,13 @@ class Productcard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 15,
-                ),
                 Center(
                   child: Hero(
                     tag: product.image,
                     child: Image.network(
                       product.image,
-                      width: 130,
-                      height: 130,
+                      width: 150,
+                      height: 150,
                       fit: BoxFit.cover,
                       loadingBuilder: (BuildContext context, Widget child,
                           ImageChunkEvent? loadingProgress) {
@@ -114,7 +111,29 @@ class Productcard extends StatelessWidget {
                 )
               ],
             ),
-          )
+          ),
+          Positioned(
+              child: Align(
+            alignment: Alignment.topRight,
+            child: Container(
+              height: 40,
+              width: 40,
+              decoration: BoxDecoration(
+                  color: kprimarycolor,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(10),
+                  )),
+              child: GestureDetector(
+                onTap: () {},
+                child: Icon(
+                  Icons.favorite_border,
+                  color: kcontentcolor,
+                  size: 22,
+                ),
+              ),
+            ),
+          ))
         ],
       ),
     );
