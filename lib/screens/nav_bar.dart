@@ -7,12 +7,12 @@ import 'package:flutter/material.dart';
 import 'package:e_commerce/constants.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class bottomNavigationBar extends StatefulWidget {
+class bottomNavBar extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _NavigationBarState();
 }
 
-class _NavigationBarState extends State<bottomNavigationBar> {
+class _NavigationBarState extends State<bottomNavBar> {
   int currentIndex = 2;
   List screens = [
     Scaffold(),

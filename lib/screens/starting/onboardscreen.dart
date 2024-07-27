@@ -57,7 +57,7 @@ class OnboardingScreen extends StatelessWidget {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => bottomNavigationBar(),
+                        builder: (context) => bottomNavBar(),
                       ));
                 },
                 child: Padding(

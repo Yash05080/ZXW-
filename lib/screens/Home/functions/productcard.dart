@@ -32,8 +32,8 @@ class Productcard extends StatelessWidget {
                     tag: product.image,
                     child: Image.network(
                       product.image,
-                      width: 150,
-                      height: 150,
+                      width: 130,
+                      height: 130,
                       fit: BoxFit.cover,
                       loadingBuilder: (BuildContext context, Widget child,
                           ImageChunkEvent? loadingProgress) {
@@ -43,7 +43,7 @@ class Productcard extends StatelessWidget {
                           return Center(
                             child: CircularProgressIndicator(
                               strokeCap: StrokeCap.butt,
-                              color: Colors.red,
+                              color: kprimarycolor,
                               value: loadingProgress.expectedTotalBytes != null
                                   ? loadingProgress.cumulativeBytesLoaded /
                                       (loadingProgress.expectedTotalBytes ?? 1)
