@@ -33,7 +33,7 @@ class CheckOutBox extends StatelessWidget {
               ),
               filled: true,
               fillColor: kcontentcolor,
-              hintText: "Enter Discoutn Code",
+              hintText: "Enter Discount Code",
               hintStyle: const TextStyle(
                 color: Colors.grey,
                 fontWeight: FontWeight.w600,

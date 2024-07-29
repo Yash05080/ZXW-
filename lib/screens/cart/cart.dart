@@ -1,5 +1,6 @@
 import 'package:e_commerce/Providers/cart_provider.dart';
 import 'package:e_commerce/constants.dart';
+import 'package:e_commerce/screens/cart/checkout_box.dart';
 import 'package:e_commerce/screens/nav_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -32,6 +33,7 @@ class _CartPageState extends State<CartPage> {
     }
 
     return Scaffold(
+      bottomSheet: CheckOutBox(),
       body: SafeArea(
         child: Column(
           children: [
