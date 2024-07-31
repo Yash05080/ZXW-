@@ -31,7 +31,9 @@ class _DetailScreenState extends State<DetailScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // app bar for back,favourite and sharing option
-            DetailAppBar(),
+            DetailAppBar(
+              product: widget.product,
+            ),
             // image slider for different angles of product
             MyImageSlider(
                 image: widget.product.image,

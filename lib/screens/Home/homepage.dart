@@ -1,8 +1,10 @@
+import 'package:e_commerce/constants.dart';
+import 'package:e_commerce/models/clothesgenre.dart';
 import 'package:e_commerce/screens/Home/functions/customAppBar.dart';
 import 'package:e_commerce/screens/Home/functions/image_slider.dart';
 import 'package:e_commerce/screens/Home/functions/productcard.dart';
 import 'package:e_commerce/screens/Home/functions/searchbar.dart';
-import 'package:e_commerce/screens/Home/functions/selectgenre.dart';
+
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:e_commerce/models/product_model.dart';
@@ -14,6 +16,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int currentSlider = 0;
+  int selectedIndex = 0;
 
   late PageController _pageController;
   @override
@@ -40,8 +43,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    List<List<Product>> selectedCategories = [
+      all,
+      menFashion,
+      womenFashion,
+      shoes,
+      beauty,
+      jewelry
+    ];
     return Scaffold(
-      backgroundColor: HexColor("f8f8ff"),
+      //backgroundColor: HexColor("f8f8ff"),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -75,7 +86,51 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
 
               //genre selection
-              GenreSelector(), //categories
+              SizedBox(
+                height: 130,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: categoriesList.length,
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedIndex = index;
+                        });
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: selectedIndex == index
+                              ? Colors.red[200]
+                              : Colors.transparent,
+                        ),
+                        child: Column(children: [
+                          Container(
+                            height: 65,
+                            width: 65,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                    image:
+                                        AssetImage(categoriesList[index].image),
+                                    fit: BoxFit.cover)),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            categoriesList[index].title,
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          )
+                        ]),
+                      ),
+                    );
+                  },
+                ),
+              ), //categories
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -98,10 +153,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       childAspectRatio: 0.75,
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20),
-                  itemCount: all.length,
+                  itemCount: selectedCategories[selectedIndex].length,
                   itemBuilder: (context, index) {
                     return Productcard(
-                      product: all[index],
+                      product: selectedCategories[selectedIndex][index],
                     );
                   })
             ],

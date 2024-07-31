@@ -1,3 +1,4 @@
+import 'package:e_commerce/Providers/favourite_provider.dart';
 import 'package:e_commerce/constants.dart';
 import 'package:e_commerce/models/product_model.dart';
 import 'package:e_commerce/screens/detail/detail_screen.dart';
@@ -9,6 +10,7 @@ class Productcard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider = FavouriteProvider.of(context);
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -57,11 +59,9 @@ class Productcard extends StatelessWidget {
                         return Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.error, color: Colors.red, size: 50),
+                            Icon(Icons.error, color: kprimarycolor, size: 50),
                             SizedBox(height: 10),
                             Text('Failed to load image'),
-                            SizedBox(height: 10),
-                            Text('$exception'),
                           ],
                         );
                       },
@@ -125,9 +125,13 @@ class Productcard extends StatelessWidget {
                     bottomLeft: Radius.circular(10),
                   )),
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  provider.toggleFavourite(product);
+                },
                 child: Icon(
-                  Icons.favorite_border,
+                  provider.isExist(product)
+                      ? Icons.favorite
+                      : Icons.favorite_border,
                   color: kcontentcolor,
                   size: 22,
                 ),

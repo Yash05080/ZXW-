@@ -1,4 +1,5 @@
 import 'package:e_commerce/Providers/cart_provider.dart';
+import 'package:e_commerce/Providers/favourite_provider.dart';
 import 'package:e_commerce/screens/loginPage/Director.dart';
 import 'package:e_commerce/screens/nav_bar.dart';
 
@@ -19,7 +20,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => CartProvider())],
+      providers: [
+        ChangeNotifierProvider(create: (_) => CartProvider()),
+        ChangeNotifierProvider(create: (_) => FavouriteProvider()),
+      ],
       child: MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
