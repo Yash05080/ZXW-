@@ -1,6 +1,6 @@
 # e_commerce
 
-A new Flutter project.
+ZXW is an e-commerce app for the clothing brand ZXW. it made using flutter for frontend and backend, firebase for database and authentication and provider for state management.
 
 ## Getting Started
 
