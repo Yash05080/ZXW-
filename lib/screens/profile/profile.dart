@@ -13,7 +13,10 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile',style: TextStyle(fontWeight: FontWeight.bold),),
+        title: Text(
+          'Profile',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         actions: [
           IconButton(
             icon: Icon(Icons.settings),
@@ -34,7 +37,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 children: [
                   CircleAvatar(
                     radius: 40,
-                    backgroundImage:AssetImage('assets/profile.JPG'),
+                    backgroundImage: AssetImage('assets/profile.JPG'),
                   ),
                   SizedBox(width: 20),
                   Column(
@@ -125,24 +128,29 @@ class _ProfilePageState extends State<ProfilePage> {
                   // Handle logout
                 },
                 style: ElevatedButton.styleFrom(
-                  foregroundColor:  Colors.redAccent,
+                  foregroundColor: Colors.redAccent,
                   padding: EdgeInsets.symmetric(vertical: 15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.logout),
-                    SizedBox(width: 10),
-                    Text(
-                      'Logout',
-                      style: TextStyle(
-                        fontSize: 18,
+                child: GestureDetector(
+                  onTap: () {
+                    FirebaseAuth.instance.signOut();
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.logout),
+                      SizedBox(width: 10),
+                      Text(
+                        'Logout',
+                        style: TextStyle(
+                          fontSize: 18,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
