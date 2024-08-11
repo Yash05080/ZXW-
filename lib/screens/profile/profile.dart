@@ -44,7 +44,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'John Doe',
+                        'Yash Agarwal',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 24,
@@ -52,7 +52,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         ),
                       ),
                       Text(
-                        'john.doe@example.com',
+                        'Yash05080@gmail.com',
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 16,
