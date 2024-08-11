@@ -1,6 +1,7 @@
 import 'package:e_commerce/screens/Home/homepage.dart';
 import 'package:e_commerce/screens/cart/cart.dart';
 import 'package:e_commerce/screens/favourites/favourites.dart';
+import 'package:e_commerce/screens/offerspage/offersPage.dart';
 import 'package:e_commerce/screens/profile/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class bottomNavBar extends StatefulWidget {
 class _NavigationBarState extends State<bottomNavBar> {
   int currentIndex = 2;
   List screens = [
-    Scaffold(),
+    Offerspage(),
     FavouritePage(),
     MyHomePage(),
     CartPage(),

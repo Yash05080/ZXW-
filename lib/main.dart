@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
               ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 255, 0, 0)),
           useMaterial3: true,
         ),
-        home: bottomNavBar(), //MainDirector(),
+        home: MainDirector(), //MainDirector(),
       ),
     );
   }
