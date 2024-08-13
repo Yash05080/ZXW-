@@ -1,3 +1,5 @@
+import 'dart:async'; // Import the Timer class
+
 import 'package:e_commerce/constants.dart';
 import 'package:e_commerce/models/clothesgenre.dart';
 import 'package:e_commerce/screens/Home/functions/customAppBar.dart';
@@ -19,23 +21,32 @@ class _MyHomePageState extends State<MyHomePage> {
   int selectedIndex = 0;
 
   late PageController _pageController;
+  Timer? _sliderTimer; // Define the timer
+
   @override
   void initState() {
     super.initState();
     _pageController = PageController(initialPage: currentSlider);
+
+    // Initialize the timer to change the slider every 5 seconds
+    _sliderTimer = Timer.periodic(Duration(seconds: 5), (timer) {
+      int nextPage = (currentSlider + 1) % 5;
+      _pageController.animateToPage(nextPage,
+          duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
+      setState(() {
+        currentSlider = nextPage;
+      });
+    });
   }
 
   @override
   void dispose() {
     _pageController.dispose();
+    _sliderTimer?.cancel(); // Cancel the timer when the widget is disposed
     super.dispose();
   }
 
   void _onPageChanged(int index) {
-    if (index >= 5) {
-      _pageController.jumpToPage(0);
-      index = 0;
-    }
     setState(() {
       currentSlider = index;
     });
